@@ -6,7 +6,7 @@ export const fetchWeatherData = async (city) => {
 
     const data = await res.json();
     return {
-        temperature: data.main.temp,
+        temperature: Math.round(data.main.temp),
         weather: data.weather[0]?.description,
         icon: data.weather[0]?.icon,
     };

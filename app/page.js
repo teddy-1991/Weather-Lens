@@ -3,6 +3,7 @@ import Header from './components/Header';
 import WeatherInfo from './components/WeatherInfo';
 import { useState, useEffect } from "react";
 import { fetchBackgroundImage } from "./api/imageApi";
+import WeatherForecast from './components/Forecast';
 
 export default function Home() {
   const [city, setCity] = useState("Calgary");
@@ -18,18 +19,11 @@ export default function Home() {
   }, [city]);
 
   return (
-    <div className="bg-cover bg-center min-h-screen p-4"
+    <div className="w-3/4 bg-cover bg-center min-h-screen p-4"
     style={{ backgroundImage: `url(${backgroundImage})`}}>
       <Header />
       <WeatherInfo city={city} />
-
-      {/* Weather Forecast */}
-      <section className="mt-8 bg-slate-200">
-        <h2 className="text-xl font-semibold">5 day Forecast</h2>
-        <div>
-          djfjejdi
-        </div>
-      </section>
+      <WeatherForecast city={city} />
     </div>
   );
 }
