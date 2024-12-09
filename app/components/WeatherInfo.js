@@ -7,7 +7,7 @@ const WeatherInfo = ( {city, unit, toggleUnit} ) => {
   const [weatherData, setWeatherData] = useState(null);
   const today = new Date();
   const formattedDate = today.toISOString().split('T')[0];
-
+  const formattedCity = city.charAt(0).toUpperCase() + city.slice(1).toLowerCase();
 
   useEffect(() => {
     const getWeatherData = async () => {
@@ -30,7 +30,7 @@ const WeatherInfo = ( {city, unit, toggleUnit} ) => {
     weatherData && (
       <div className="mt-8 bg-white/70 flex justify-evenly p-6 rounded-lg shadow-lg">
         <div>
-          <h2 className="text-3xl font-semibold">{city}</h2>
+          <h2 className="text-3xl font-semibold">{formattedCity}</h2>
           <p>{formattedDate}</p>
         </div>
         <div className="text-center flex justify-center items-center">
