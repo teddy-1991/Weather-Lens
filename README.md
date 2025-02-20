@@ -14,10 +14,6 @@ Weather Lens is a real-time weather application that allows users to search for 
   - **OpenWeather API** (for real-time weather data)  
   - **Unsplash API** (for city-based background images)  
 
-## 📷 Demo  
-![Weather Lens Screenshot](https://via.placeholder.com/800x400)  
-*Example screenshot of the Weather Lens UI*  
-
 ## 🔗 Live Demo  
 [Check out Weather Lens](https://cprg306-project-nine-rust.vercel.app/)  
 
